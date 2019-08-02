@@ -187,7 +187,9 @@ levels=range(rango_i,rango_s,1)
 if numproc==1:
 	# Lo corremos en serie
 	for i in range(1,Tiempo,1):
+            #grafica la base (diseño)
             fig=plot_base(w,h,dpi,limits)
+            #grafica la variable
             plot_temp(i, T2[i,:,:], levels, cmap1, Fechas[i],fig)
 else:
 	# Lo corremos en paralelo
